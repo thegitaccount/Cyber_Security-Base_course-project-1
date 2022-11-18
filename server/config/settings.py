@@ -27,6 +27,12 @@ SECRET_KEY = '_#h3^7@u)4ry6p@q_%uh%0tdah_47*k0it0pobh%p-c_2b=u0n'
 DEBUG = True
 ALLOWED_HOSTS = []
 
+#If you want to set DEBUG = False, you also need to configure ALLOWED_HOSTS
+
+#DEBUG = False
+#ALLOWED_HOSTS = ['*']
+
+
 
 # Application definition
 

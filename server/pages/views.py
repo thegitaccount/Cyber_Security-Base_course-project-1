@@ -7,5 +7,6 @@ from django.contrib.auth.decorators import login_required
 
 #@login_required(login_url='/admin')
 def homePageView(request):
-    return HttpResponse('This is a secret message that you should see if you\'re not logged in')
+
+    return HttpResponse('This is a secret message -  you should not see it if you\'re not logged in!')
 

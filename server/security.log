@@ -949,3 +949,998 @@ django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'alibaba.zaprox
 2022-11-18 10:20:24,973 django.server INFO     "GET /admin/login/?next=/admin/%3Fnext%3D/ HTTP/1.1" 200 2239
 2022-11-18 10:20:25,995 django.server INFO     "GET /admin/login/?next=/admin/%3Fnext%3D/ HTTP/1.1" 200 2239
 2022-11-18 10:20:28,035 django.server INFO     "GET / HTTP/1.1" 200 74
+2022-11-18 12:24:32,559 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-11-18 12:24:35,285 django.server INFO     "GET / HTTP/1.1" 200 74
+2022-12-01 16:57:28,865 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 16:57:33,217 django.server INFO     "GET / HTTP/1.1" 200 74
+2022-12-01 17:10:26,139 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 17:11:00,058 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 17:11:06,927 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 17:11:07,005 django.request ERROR    Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/tj/.local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/tj/.local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: pages/login.html
+2022-12-01 17:11:07,006 django.server ERROR    "GET /login/?next=/ HTTP/1.1" 500 78459
+2022-12-01 17:14:53,470 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 17:14:57,913 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 17:14:58,001 django.request ERROR    Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/tj/.local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/tj/.local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: pages/login.html
+2022-12-01 17:14:58,002 django.server ERROR    "GET /login/?next=/ HTTP/1.1" 500 78811
+2022-12-01 17:17:32,401 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 17:17:35,689 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 17:17:35,730 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 17:17:46,818 django.server INFO     "POST /login/?next=/ HTTP/1.1" 200 760
+2022-12-01 17:17:58,576 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 17:17:58,634 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pages_file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/tj/cyber_security_project_1/server/pages/views.py", line 50, in homePageView
+    uploads = [{'id': f.id, 'name': f.data.name.split('/')[-1]} for f in files]
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 394, in __iter__
+    self._fetch_all()
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pages_file
+2022-12-01 17:17:58,636 django.server ERROR    "GET / HTTP/1.1" 500 127779
+2022-12-01 17:18:26,263 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 17:18:31,982 django.server INFO     "GET /admin/ HTTP/1.1" 200 3892
+2022-12-01 17:18:31,998 django.server INFO     "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2022-12-01 17:18:32,003 django.server INFO     "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2022-12-01 17:18:32,004 django.server INFO     "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+2022-12-01 17:18:32,006 django.server INFO     "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2022-12-01 17:18:32,007 django.server INFO     "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2022-12-01 17:18:32,009 django.server INFO     "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2022-12-01 17:18:32,043 django.server INFO     "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2022-12-01 17:18:32,105 django.server INFO     "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2022-12-01 17:18:32,109 django.server INFO     "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2022-12-01 17:18:32,159 django.server INFO     "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2022-12-01 17:18:32,165 django.server INFO     "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2022-12-01 17:18:32,166 django.server INFO     "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2022-12-01 17:18:36,072 django.server INFO     "GET /admin/auth/user/ HTTP/1.1" 200 8841
+2022-12-01 17:18:36,094 django.server INFO     "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-12-01 17:18:36,100 django.server INFO     "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2022-12-01 17:18:36,101 django.server INFO     "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2022-12-01 17:18:36,101 django.server INFO     "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2022-12-01 17:18:36,102 django.server INFO     "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2022-12-01 17:18:36,102 django.server INFO     "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+2022-12-01 17:18:36,103 django.server INFO     "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2022-12-01 17:18:36,110 django.server INFO     "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2022-12-01 17:18:36,111 django.server INFO     "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2022-12-01 17:18:36,111 django.server INFO     "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2022-12-01 17:18:36,178 django.server INFO     "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+2022-12-01 17:18:36,180 django.server INFO     "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+2022-12-01 17:18:36,192 django.server INFO     "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+2022-12-01 17:18:36,193 django.server INFO     "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+2022-12-01 17:18:36,196 django.server INFO     "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+2022-12-01 17:18:36,198 django.server INFO     "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+2022-12-01 17:18:39,402 django.server INFO     "GET /admin/auth/user/1/change/ HTTP/1.1" 200 16010
+2022-12-01 17:18:39,422 django.server INFO     "GET /static/admin/css/forms.css HTTP/1.1" 200 8944
+2022-12-01 17:18:39,430 django.server INFO     "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4360
+2022-12-01 17:18:39,431 django.server INFO     "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 11317
+2022-12-01 17:18:39,432 django.server INFO     "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+2022-12-01 17:18:39,438 django.server INFO     "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19379
+2022-12-01 17:18:39,438 django.server INFO     "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-12-01 17:18:39,472 django.server INFO     "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+2022-12-01 17:18:39,472 django.server INFO     "GET /static/admin/css/widgets.css HTTP/1.1" 200 11297
+2022-12-01 17:18:39,522 django.server INFO     "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+2022-12-01 17:18:39,577 django.server INFO     "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+2022-12-01 17:18:39,587 django.server INFO     "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+2022-12-01 17:18:39,589 django.server INFO     "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+2022-12-01 17:18:39,589 django.server INFO     "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+2022-12-01 17:18:39,590 django.server INFO     "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+2022-12-01 17:18:47,824 django.server INFO     "GET /admin/auth/user/ HTTP/1.1" 200 8841
+2022-12-01 17:18:50,344 django.server INFO     "GET /admin/auth/user/2/change/ HTTP/1.1" 200 15930
+2022-12-01 17:18:50,372 django.server INFO     "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-12-01 17:18:53,451 django.server INFO     "GET /admin/auth/user/ HTTP/1.1" 200 8841
+2022-12-01 17:18:53,981 django.server INFO     "GET /admin/ HTTP/1.1" 200 3892
+2022-12-01 17:19:57,606 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:19:57,943 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:19:57,995 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:19:58,406 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:19:58,457 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:19:58,895 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:19:58,948 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:19:59,352 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:19:59,405 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:19:59,810 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:19:59,869 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:00,293 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:00,349 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:00,739 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:00,792 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:01,190 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:01,241 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:01,647 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:01,702 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:02,116 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:02,170 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:02,573 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:02,625 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:03,037 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:03,090 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:03,494 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:03,545 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:03,940 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:03,999 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:04,400 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:04,453 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:04,871 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:04,921 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:05,322 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:05,373 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:05,776 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:05,839 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:06,238 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:06,289 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:06,698 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:06,749 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:07,155 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:07,205 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:07,614 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:07,666 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:08,073 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:08,126 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:08,549 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:08,602 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:09,027 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:09,079 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:09,468 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:09,525 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:09,942 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:09,993 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:10,413 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:10,469 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:10,894 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:10,947 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:11,358 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:11,410 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:11,831 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:11,896 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:12,309 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:12,361 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:12,766 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:12,819 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:13,232 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:13,287 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:13,703 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:13,762 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:14,192 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:14,245 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:14,656 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:14,709 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:15,130 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:15,181 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:15,570 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:15,620 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:16,053 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:16,106 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:16,540 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:16,595 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:17,028 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:17,082 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:17,489 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:17,541 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:17,978 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:18,030 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:18,441 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:18,494 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:18,901 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:18,956 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:19,367 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:19,418 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:19,807 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:19,856 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:20,266 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:20,317 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:20,732 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:20,785 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:21,181 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:21,235 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:21,642 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:21,693 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:22,108 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:22,161 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:22,569 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:22,621 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:23,043 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:23,097 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:23,505 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:23,558 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:23,986 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:24,037 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:24,448 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:24,503 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:24,922 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:24,974 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:25,384 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:25,437 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:25,856 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:25,912 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:26,326 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:26,377 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:26,792 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:26,844 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:27,294 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:27,345 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:27,752 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:20:27,807 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:20:28,215 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2022-12-01 17:20:28,272 django.server INFO     "GET /admin/ HTTP/1.1" 200 3892
+2022-12-01 17:20:35,928 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pages_file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/tj/cyber_security_project_1/server/pages/views.py", line 50, in homePageView
+    uploads = [{'id': f.id, 'name': f.data.name.split('/')[-1]} for f in files]
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 394, in __iter__
+    self._fetch_all()
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pages_file
+2022-12-01 17:20:35,929 django.server ERROR    "GET / HTTP/1.1" 500 127478
+2022-12-01 17:20:44,409 django.server INFO     "GET /login HTTP/1.1" 301 0
+2022-12-01 17:20:44,416 django.server INFO     "GET /login/ HTTP/1.1" 200 603
+2022-12-01 17:20:49,567 django.server INFO     "POST /login/ HTTP/1.1" 200 760
+2022-12-01 17:20:54,831 django.server INFO     "POST /login/ HTTP/1.1" 302 0
+2022-12-01 17:20:54,878 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pages_file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/tj/cyber_security_project_1/server/pages/views.py", line 50, in homePageView
+    uploads = [{'id': f.id, 'name': f.data.name.split('/')[-1]} for f in files]
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 394, in __iter__
+    self._fetch_all()
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pages_file
+2022-12-01 17:20:54,879 django.server ERROR    "GET / HTTP/1.1" 500 127772
+2022-12-01 17:22:17,600 django.server INFO     "GET /login/ HTTP/1.1" 200 603
+2022-12-01 17:22:22,727 django.server INFO     "POST /login/ HTTP/1.1" 302 0
+2022-12-01 17:22:22,776 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pages_file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/tj/cyber_security_project_1/server/pages/views.py", line 50, in homePageView
+    uploads = [{'id': f.id, 'name': f.data.name.split('/')[-1]} for f in files]
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 394, in __iter__
+    self._fetch_all()
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pages_file
+2022-12-01 17:22:22,777 django.server ERROR    "GET / HTTP/1.1" 500 127772
+2022-12-01 17:25:29,254 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 17:25:34,376 django.server INFO     "GET / HTTP/1.1" 200 908
+2022-12-01 17:25:39,475 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 17:25:39,480 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 17:25:39,555 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 17:25:46,157 django.server INFO     "POST /login/?next=/ HTTP/1.1" 200 760
+2022-12-01 17:25:50,470 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 17:25:50,478 django.server INFO     "GET / HTTP/1.1" 200 908
+2022-12-01 17:29:04,654 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 17:29:05,038 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 17:29:05,054 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 17:29:15,034 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 17:29:19,214 django.server INFO     "GET /admin HTTP/1.1" 301 0
+2022-12-01 17:29:19,242 django.server INFO     "GET /admin/ HTTP/1.1" 302 0
+2022-12-01 17:29:19,337 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:29:19,472 django.server INFO     "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 796
+2022-12-01 17:29:19,473 django.server INFO     "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2619
+2022-12-01 17:29:19,473 django.server INFO     "GET /static/admin/css/login.css HTTP/1.1" 200 958
+2022-12-01 17:29:19,474 django.server INFO     "GET /static/admin/css/base.css HTTP/1.1" 200 20344
+2022-12-01 17:29:19,481 django.server INFO     "GET /static/admin/css/responsive.css HTTP/1.1" 200 18854
+2022-12-01 17:29:19,482 django.server INFO     "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3763
+2022-12-01 17:29:19,521 django.server INFO     "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+2022-12-01 17:29:19,610 django.server INFO     "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+2022-12-01 17:29:19,612 django.server INFO     "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+2022-12-01 17:29:28,099 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:29:28,125 django.server INFO     "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+2022-12-01 17:29:31,109 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:29:35,182 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:29:38,656 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2022-12-01 17:29:38,680 django.server INFO     "GET /admin/ HTTP/1.1" 200 3892
+2022-12-01 17:29:38,742 django.server INFO     "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+2022-12-01 17:29:38,792 django.server INFO     "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+2022-12-01 17:29:38,793 django.server INFO     "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+2022-12-01 17:29:53,073 django.server INFO     "GET /login HTTP/1.1" 301 0
+2022-12-01 17:29:53,084 django.server INFO     "GET /login/ HTTP/1.1" 200 603
+2022-12-01 17:30:00,182 django.server INFO     "GET /admin/ HTTP/1.1" 200 3892
+2022-12-01 17:30:11,259 django.server INFO     "GET / HTTP/1.1" 200 908
+2022-12-01 17:30:17,707 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 17:30:17,718 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 17:30:17,777 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 17:30:21,048 django.server INFO     "GET /admin/ HTTP/1.1" 302 0
+2022-12-01 17:30:21,062 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-01 17:30:27,174 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-01 17:30:30,831 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2022-12-01 17:30:30,845 django.server INFO     "GET /admin/ HTTP/1.1" 200 3892
+2022-12-01 17:30:34,892 django.server INFO     "GET / HTTP/1.1" 200 908
+2022-12-01 17:30:41,380 django.server INFO     "GET /admin/ HTTP/1.1" 200 3892
+2022-12-01 17:30:43,344 django.server INFO     "POST /admin/logout/ HTTP/1.1" 200 1552
+2022-12-01 17:30:49,402 django.server INFO     "GET /login/ HTTP/1.1" 200 603
+2022-12-01 17:30:56,338 django.server INFO     "POST /login/ HTTP/1.1" 302 0
+2022-12-01 17:30:56,350 django.server INFO     "GET / HTTP/1.1" 200 908
+2022-12-01 17:31:13,186 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-01 17:31:13,192 django.server INFO     "GET / HTTP/1.1" 200 1304
+2022-12-01 17:32:01,700 django.server INFO     "POST /delete/ HTTP/1.1" 302 0
+2022-12-01 17:32:01,709 django.server INFO     "GET / HTTP/1.1" 200 908
+2022-12-01 17:32:28,784 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 17:32:28,790 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 17:32:28,844 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 17:32:35,872 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 17:32:35,878 django.server INFO     "GET / HTTP/1.1" 200 908
+2022-12-01 17:32:42,215 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 17:32:42,225 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 17:32:42,288 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 17:33:00,595 django.server INFO     "POST /login/?next=/ HTTP/1.1" 200 760
+2022-12-01 17:33:08,651 django.server INFO     "POST /login/?next=/ HTTP/1.1" 200 760
+2022-12-01 17:33:15,769 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 17:33:15,775 django.server INFO     "GET / HTTP/1.1" 200 907
+2022-12-01 17:33:35,815 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-01 17:33:35,841 django.server INFO     "GET / HTTP/1.1" 200 1279
+2022-12-01 17:33:42,779 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 17:33:42,783 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 17:33:42,832 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 17:33:48,394 django.server INFO     "POST /login/?next=/ HTTP/1.1" 200 760
+2022-12-01 17:33:51,496 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 17:33:51,504 django.server INFO     "GET / HTTP/1.1" 200 908
+2022-12-01 17:33:58,328 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 17:33:58,332 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 17:33:58,389 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 17:34:01,970 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 17:34:01,977 django.server INFO     "GET / HTTP/1.1" 200 1279
+2022-12-01 17:34:57,826 django.server INFO     "POST /delete/ HTTP/1.1" 302 0
+2022-12-01 17:34:57,837 django.server INFO     "GET / HTTP/1.1" 200 907
+2022-12-01 17:35:08,996 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 17:35:09,002 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 17:35:09,049 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 17:35:15,540 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 17:35:15,546 django.server INFO     "GET / HTTP/1.1" 200 908
+2022-12-01 17:35:29,068 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-01 17:35:29,073 django.server INFO     "GET / HTTP/1.1" 200 1312
+2022-12-01 17:35:57,975 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 17:35:57,980 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 17:35:58,029 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 17:36:05,661 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 17:36:05,668 django.server INFO     "GET / HTTP/1.1" 200 907
+2022-12-01 17:37:02,526 django.utils.autoreload INFO     /home/tj/cyber_security_project_1/server/pages/views.py changed, reloading.
+2022-12-01 17:37:02,894 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 17:37:07,710 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 17:37:07,777 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tj/cyber_security_project_1/server/pages/views.py", line 49, in homePageView
+    files = File.objects.filter(owner=request.user)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1420, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1438, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1445, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fc78f2ee350>>.
+2022-12-01 17:37:07,779 django.server ERROR    "GET / HTTP/1.1" 500 122604
+2022-12-01 17:37:10,493 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tj/cyber_security_project_1/server/pages/views.py", line 49, in homePageView
+    files = File.objects.filter(owner=request.user)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1420, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1438, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1445, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fc78f28f1f0>>.
+2022-12-01 17:37:10,494 django.server ERROR    "GET / HTTP/1.1" 500 122453
+2022-12-01 17:37:13,467 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tj/cyber_security_project_1/server/pages/views.py", line 49, in homePageView
+    files = File.objects.filter(owner=request.user)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1420, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1438, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1445, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fc78e973520>>.
+2022-12-01 17:37:13,468 django.server ERROR    "GET / HTTP/1.1" 500 122453
+2022-12-01 17:37:25,032 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 17:37:29,180 django.server INFO     "GET / HTTP/1.1" 200 1312
+2022-12-01 17:37:40,150 django.server INFO     "GET /admin/ HTTP/1.1" 200 3892
+2022-12-01 17:37:40,168 django.server INFO     "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2022-12-01 17:37:40,168 django.server INFO     "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+2022-12-01 17:37:40,174 django.server INFO     "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2022-12-01 17:37:40,176 django.server INFO     "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2022-12-01 17:37:40,176 django.server INFO     "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2022-12-01 17:37:40,177 django.server INFO     "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2022-12-01 17:37:40,211 django.server INFO     "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2022-12-01 17:37:40,273 django.server INFO     "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2022-12-01 17:37:40,278 django.server INFO     "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2022-12-01 17:37:40,327 django.server INFO     "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2022-12-01 17:37:40,334 django.server INFO     "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2022-12-01 17:37:40,335 django.server INFO     "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2022-12-01 17:37:42,135 django.server INFO     "POST /admin/logout/ HTTP/1.1" 200 1552
+2022-12-01 17:37:48,989 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tj/cyber_security_project_1/server/pages/views.py", line 49, in homePageView
+    files = File.objects.filter(owner=request.user)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1420, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1438, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1445, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fa02ac3cd00>>.
+2022-12-01 17:37:48,992 django.server ERROR    "GET / HTTP/1.1" 500 121681
+2022-12-01 17:37:55,712 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 17:38:00,413 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tj/cyber_security_project_1/server/pages/views.py", line 49, in homePageView
+    files = File.objects.filter(owner=request.user)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1420, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1438, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1445, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fa029b44490>>.
+2022-12-01 17:38:00,414 django.server ERROR    "GET / HTTP/1.1" 500 122316
+2022-12-01 17:38:25,056 django.utils.autoreload INFO     /home/tj/cyber_security_project_1/server/pages/views.py changed, reloading.
+2022-12-01 17:38:25,459 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 17:38:26,404 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 17:38:26,422 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 17:38:39,395 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 17:38:39,406 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 17:38:45,317 django.server INFO     "POST /login/?next=/ HTTP/1.1" 200 760
+2022-12-01 17:38:54,317 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 17:38:54,325 django.server INFO     "GET / HTTP/1.1" 200 1312
+2022-12-01 17:39:16,742 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 17:39:16,746 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 17:39:16,793 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 17:39:21,809 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 17:39:21,821 django.server INFO     "GET / HTTP/1.1" 200 907
+2022-12-01 17:42:57,747 django.utils.autoreload INFO     /home/tj/cyber_security_project_1/server/pages/views.py changed, reloading.
+2022-12-01 17:42:58,117 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 17:43:33,593 django.server INFO     "GET / HTTP/1.1" 200 907
+2022-12-01 17:43:36,833 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 17:43:36,837 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 17:43:36,895 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 17:43:48,244 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 17:43:48,250 django.server INFO     "GET / HTTP/1.1" 200 907
+2022-12-01 17:45:16,036 django.server INFO     "GET / HTTP/1.1" 200 909
+2022-12-01 17:45:19,796 django.server INFO     "GET / HTTP/1.1" 200 909
+2022-12-01 17:45:37,457 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 17:45:37,465 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 17:45:37,525 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 17:45:44,250 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 17:45:44,258 django.server INFO     "GET / HTTP/1.1" 200 1314
+2022-12-01 17:46:31,705 django.server INFO     "GET / HTTP/1.1" 200 1326
+2022-12-01 17:50:33,832 django.server INFO     "GET / HTTP/1.1" 200 1326
+2022-12-01 18:37:26,273 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 18:37:30,313 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 18:37:30,351 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 18:37:30,495 django.request WARNING  Not Found: /favicon.ico
+2022-12-01 18:37:30,496 django.server WARNING  "GET /favicon.ico HTTP/1.1" 404 3008
+2022-12-01 18:37:35,713 django.server INFO     "POST /login/?next=/ HTTP/1.1" 200 760
+2022-12-01 18:37:42,117 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 18:37:42,127 django.server INFO     "GET / HTTP/1.1" 200 1326
+2022-12-01 18:38:04,155 django.server INFO     "POST /delete/ HTTP/1.1" 302 0
+2022-12-01 18:38:04,164 django.server INFO     "GET / HTTP/1.1" 200 922
+2022-12-01 18:38:23,948 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-01 18:38:23,958 django.server INFO     "GET / HTTP/1.1" 200 1300
+2022-12-01 18:39:55,323 django.utils.autoreload INFO     /home/tj/cyber_security_project_1/server/pages/views.py changed, reloading.
+2022-12-01 18:39:55,680 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 18:40:00,115 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 18:40:59,689 django.utils.autoreload INFO     /home/tj/cyber_security_project_1/server/pages/views.py changed, reloading.
+2022-12-01 18:41:00,070 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 18:41:12,853 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 18:41:12,867 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 18:41:12,952 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 18:41:17,958 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 18:41:17,965 django.server INFO     "GET / HTTP/1.1" 200 921
+2022-12-01 18:41:52,058 django.utils.autoreload INFO     /home/tj/cyber_security_project_1/server/pages/views.py changed, reloading.
+2022-12-01 18:41:52,412 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 18:42:07,001 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 18:42:11,847 django.server INFO     "GET / HTTP/1.1" 200 921
+2022-12-01 18:42:13,534 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 18:42:28,934 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tj/cyber_security_project_1/server/pages/views.py", line 46, in homePageView
+    files = File.objects.filter(owner=request.user)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1420, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1438, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 1445, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f92795fa8f0>>.
+2022-12-01 18:42:28,937 django.server ERROR    "GET / HTTP/1.1" 500 121680
+2022-12-01 18:42:57,589 django.utils.autoreload INFO     /home/tj/cyber_security_project_1/server/pages/views.py changed, reloading.
+2022-12-01 18:42:57,953 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 18:43:03,396 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 18:43:03,411 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 18:44:07,974 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 18:44:07,982 django.server INFO     "GET / HTTP/1.1" 200 921
+2022-12-01 18:44:10,360 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 18:44:11,856 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 18:44:16,923 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 18:44:16,931 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 18:44:16,985 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 18:44:23,304 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 18:44:23,312 django.server INFO     "GET / HTTP/1.1" 200 1300
+2022-12-01 18:44:25,650 django.server INFO     "POST /delete/ HTTP/1.1" 302 0
+2022-12-01 18:44:25,666 django.server INFO     "GET / HTTP/1.1" 200 922
+2022-12-01 18:45:03,904 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-01 18:45:03,913 django.server INFO     "GET / HTTP/1.1" 200 1294
+2022-12-01 18:45:10,776 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 18:45:10,785 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 18:45:10,842 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 18:45:16,605 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 18:45:16,616 django.server INFO     "GET / HTTP/1.1" 200 1294
+2022-12-01 18:45:27,104 django.server INFO     "GET / HTTP/1.1" 200 1294
+2022-12-01 18:45:29,724 django.request ERROR    Internal Server Error: /download/5
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/tj/cyber_security_project_1/server/pages/views.py", line 26, in downloadView
+    response = HttpResponse(f.data, content_type='text/plain')
+  File "/home/tj/.local/lib/python3.10/site-packages/django/http/response.py", line 373, in __init__
+    self.content = content
+  File "/home/tj/.local/lib/python3.10/site-packages/django/http/response.py", line 398, in content
+    content = b"".join(self.make_bytes(chunk) for chunk in value)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/http/response.py", line 398, in <genexpr>
+    content = b"".join(self.make_bytes(chunk) for chunk in value)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/files/base.py", line 78, in __iter__
+    for chunk in self.chunks():
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/files/base.py", line 55, in chunks
+    self.seek(0)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/files/utils.py", line 46, in <lambda>
+    seek = property(lambda self: self.file.seek)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/files.py", line 47, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/files/storage.py", line 40, in open
+    return self._open(name, mode)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/files/storage.py", line 276, in _open
+    return File(open(self.path(name), mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/tj/cyber_security_project_1/server/media/user_1/blaa.txt'
+2022-12-01 18:45:29,726 django.server ERROR    "GET /download/5 HTTP/1.1" 500 105553
+2022-12-01 18:45:35,022 django.server INFO     "POST /delete/ HTTP/1.1" 302 0
+2022-12-01 18:45:35,046 django.server INFO     "GET / HTTP/1.1" 200 922
+2022-12-01 18:45:53,422 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-01 18:45:53,432 django.server INFO     "GET / HTTP/1.1" 200 1286
+2022-12-01 18:45:58,145 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-01 18:45:58,166 django.server INFO     "GET / HTTP/1.1" 200 1650
+2022-12-01 18:45:59,191 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-01 18:45:59,209 django.server INFO     "GET / HTTP/1.1" 200 2014
+2022-12-01 18:46:00,241 django.request ERROR    Internal Server Error: /download/8
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/tj/cyber_security_project_1/server/pages/views.py", line 26, in downloadView
+    response = HttpResponse(f.data, content_type='text/plain')
+  File "/home/tj/.local/lib/python3.10/site-packages/django/http/response.py", line 373, in __init__
+    self.content = content
+  File "/home/tj/.local/lib/python3.10/site-packages/django/http/response.py", line 398, in content
+    content = b"".join(self.make_bytes(chunk) for chunk in value)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/http/response.py", line 398, in <genexpr>
+    content = b"".join(self.make_bytes(chunk) for chunk in value)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/files/base.py", line 78, in __iter__
+    for chunk in self.chunks():
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/files/base.py", line 55, in chunks
+    self.seek(0)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/files/utils.py", line 46, in <lambda>
+    seek = property(lambda self: self.file.seek)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/files.py", line 45, in _get_file
+    self._require_file()
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/fields/files.py", line 40, in _require_file
+    raise ValueError(
+ValueError: The 'data' attribute has no file associated with it.
+2022-12-01 18:46:00,242 django.server ERROR    "GET /download/8 HTTP/1.1" 500 100811
+2022-12-01 18:46:04,493 django.server INFO     "POST /delete/ HTTP/1.1" 302 0
+2022-12-01 18:46:04,510 django.server INFO     "GET / HTTP/1.1" 200 1650
+2022-12-01 18:46:05,042 django.server INFO     "POST /delete/ HTTP/1.1" 302 0
+2022-12-01 18:46:05,060 django.server INFO     "GET / HTTP/1.1" 200 1286
+2022-12-01 18:46:06,053 django.server INFO     "POST /delete/ HTTP/1.1" 302 0
+2022-12-01 18:46:06,072 django.server INFO     "GET / HTTP/1.1" 200 922
+2022-12-01 18:47:17,149 django.utils.autoreload INFO     /home/tj/cyber_security_project_1/server/pages/views.py changed, reloading.
+2022-12-01 18:47:17,535 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 18:55:25,534 django.utils.autoreload INFO     /home/tj/cyber_security_project_1/server/pages/models.py changed, reloading.
+2022-12-01 18:55:25,889 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 18:55:42,188 django.utils.autoreload INFO     /home/tj/cyber_security_project_1/server/pages/models.py changed, reloading.
+2022-12-01 18:55:42,543 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 18:56:12,357 django.server INFO     "GET / HTTP/1.1" 200 921
+2022-12-01 18:56:18,895 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-01 18:56:18,902 django.server INFO     "GET / HTTP/1.1" 200 1299
+2022-12-01 18:56:42,286 django.request ERROR    Internal Server Error: /delete/
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/tj/cyber_security_project_1/server/pages/views.py", line 13, in deleteView
+    f.delete()
+  File "/home/tj/cyber_security_project_1/server/pages/models.py", line 15, in delete
+    if self.filename:
+AttributeError: 'File' object has no attribute 'filename'
+2022-12-01 18:56:42,287 django.server ERROR    "POST /delete/ HTTP/1.1" 500 73889
+2022-12-01 18:57:36,169 django.utils.autoreload INFO     /home/tj/cyber_security_project_1/server/pages/models.py changed, reloading.
+2022-12-01 18:57:36,526 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 18:57:41,535 django.server INFO     "POST /delete/ HTTP/1.1" 302 0
+2022-12-01 18:57:41,565 django.server INFO     "GET / HTTP/1.1" 200 921
+2022-12-01 18:58:39,478 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 18:58:39,481 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 18:58:39,538 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 18:58:43,248 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 18:58:43,254 django.server INFO     "GET / HTTP/1.1" 200 921
+2022-12-01 18:59:13,056 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-01 18:59:13,077 django.server INFO     "GET / HTTP/1.1" 200 1301
+2022-12-01 18:59:29,021 django.server INFO     "POST /delete/ HTTP/1.1" 302 0
+2022-12-01 18:59:29,031 django.server INFO     "GET / HTTP/1.1" 200 921
+2022-12-01 19:01:11,539 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-01 19:01:11,553 django.server INFO     "GET / HTTP/1.1" 200 1301
+2022-12-01 19:01:17,248 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-01 19:01:17,269 django.server INFO     "GET / HTTP/1.1" 200 1675
+2022-12-01 19:01:30,146 django.server INFO     "POST /delete/ HTTP/1.1" 302 0
+2022-12-01 19:01:30,153 django.server INFO     "GET / HTTP/1.1" 200 1301
+2022-12-01 19:01:37,212 django.server INFO     "POST /delete/ HTTP/1.1" 302 0
+2022-12-01 19:01:37,220 django.server INFO     "GET / HTTP/1.1" 200 921
+2022-12-01 19:12:04,326 django.server INFO     "GET / HTTP/1.1" 200 1095
+2022-12-01 19:12:13,608 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-01 19:12:13,626 django.server INFO     "GET / HTTP/1.1" 200 1469
+2022-12-01 19:12:22,985 django.server INFO     "POST /delete/ HTTP/1.1" 302 0
+2022-12-01 19:12:23,002 django.server INFO     "GET / HTTP/1.1" 200 1095
+2022-12-01 19:14:04,593 django.server INFO     "GET / HTTP/1.1" 200 930
+2022-12-01 19:14:05,984 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 19:14:05,994 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 19:14:06,051 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 19:14:11,578 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 19:14:11,584 django.server INFO     "GET / HTTP/1.1" 200 931
+2022-12-01 19:16:21,725 django.server INFO     "GET / HTTP/1.1" 200 931
+2022-12-01 19:16:23,201 django.server INFO     "GET / HTTP/1.1" 200 931
+2022-12-01 19:16:43,923 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-01 19:16:46,633 django.server INFO     "GET / HTTP/1.1" 200 931
+2022-12-01 19:16:52,416 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-01 19:16:52,434 django.server INFO     "GET / HTTP/1.1" 200 1494
+2022-12-01 19:16:53,881 django.server INFO     "POST /delete/ HTTP/1.1" 302 0
+2022-12-01 19:16:53,887 django.server INFO     "GET / HTTP/1.1" 200 931
+2022-12-01 19:17:16,464 django.server INFO     "GET / HTTP/1.1" 200 931
+2022-12-01 19:22:14,016 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-01 19:22:14,033 django.server INFO     "GET / HTTP/1.1" 200 1310
+2022-12-01 19:22:26,229 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-01 19:22:26,245 django.server INFO     "GET / HTTP/1.1" 200 1687
+2022-12-01 19:22:27,493 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 19:22:27,504 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 19:22:27,577 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 19:22:30,825 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 19:22:30,834 django.server INFO     "GET / HTTP/1.1" 200 930
+2022-12-01 19:22:36,698 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-01 19:22:36,716 django.server INFO     "GET / HTTP/1.1" 200 1307
+2022-12-01 19:22:40,603 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-01 19:22:40,613 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-01 19:22:40,672 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 603
+2022-12-01 19:22:49,259 django.server INFO     "POST /login/?next=/ HTTP/1.1" 200 760
+2022-12-01 19:22:52,678 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-01 19:22:52,684 django.server INFO     "GET / HTTP/1.1" 200 1687
+2022-12-01 19:23:00,606 django.server INFO     "POST /delete/ HTTP/1.1" 302 0
+2022-12-01 19:23:00,614 django.server INFO     "GET / HTTP/1.1" 200 1308
+2022-12-01 19:23:09,717 django.server INFO     "POST /delete/ HTTP/1.1" 302 0
+2022-12-01 19:23:09,759 django.server INFO     "GET / HTTP/1.1" 200 931
+2022-12-01 19:24:25,539 django.server INFO     "GET / HTTP/1.1" 200 932

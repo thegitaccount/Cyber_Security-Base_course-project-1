@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 #DEBUG = False
 #ALLOWED_HOSTS = ['*']
 
-
+MEDIA_ROOT = BASE_DIR + '/media'
 
 # Application definition
 
@@ -76,6 +76,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'server.config.wsgi.application'
 
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+SESSION_COOKIE_SAMESITE = None
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases

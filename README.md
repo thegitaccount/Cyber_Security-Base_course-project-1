@@ -94,4 +94,7 @@ http://127.0.0.1:8000/some_random_string
 
 and the server will tell the new admin page path, among other paths.
 
-To fix this replace the line 33 with the line 38.
+To fix this replace the line 33 with the line 38 and the server will tell:
+
+Not Found
+The requested resource was not found on this server.

@@ -94,4 +94,4 @@ http://127.0.0.1:8000/some_random_string
 
 and the server will tell the new admin page path, among other paths.
 
-To fix this replace the lines 33 - 24 with the lines 38 - 39.
+To fix this replace the lines 33 - 34 with the lines 38 - 39.

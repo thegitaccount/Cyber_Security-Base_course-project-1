@@ -239,3 +239,14 @@
 2022-12-04 14:18:44,366 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
 2022-12-04 14:18:44,378 django.server INFO     "GET / HTTP/1.1" 302 0
 2022-12-04 14:18:44,441 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622
+2022-12-04 14:24:47,036 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-04 14:24:51,211 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-04 14:24:51,288 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622
+2022-12-04 14:24:54,890 django.server INFO     "POST /login/?next=/ HTTP/1.1" 200 779
+2022-12-04 14:25:00,171 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-04 14:25:00,179 django.server INFO     "GET / HTTP/1.1" 200 1311
+2022-12-04 14:25:03,196 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-04 14:25:03,199 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-04 14:25:03,248 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622
+2022-12-04 14:25:09,659 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-04 14:25:09,666 django.server INFO     "GET / HTTP/1.1" 200 1686

@@ -291,3 +291,119 @@ server.pages.models.File.DoesNotExist: File matching query does not exist.
 2022-12-04 14:48:00,375 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
 2022-12-04 14:48:00,388 django.server INFO     "GET / HTTP/1.1" 302 0
 2022-12-04 14:48:00,455 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622
+2022-12-04 14:52:40,372 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-04 14:52:44,720 django.server INFO     "GET /download/22 HTTP/1.1" 302 0
+2022-12-04 14:52:44,739 django.server INFO     "GET /login/?next=/download/22 HTTP/1.1" 200 622
+2022-12-04 14:52:51,763 django.server INFO     "POST /login/?next=/download/22 HTTP/1.1" 302 0
+2022-12-04 14:52:51,772 django.server INFO     "GET /download/22 HTTP/1.1" 200 125784
+2022-12-04 14:52:55,406 django.security.csrf WARNING  Forbidden (CSRF token from POST incorrect.): /login/
+2022-12-04 14:52:55,407 django.server WARNING  "POST /login/?next=/download/22 HTTP/1.1" 403 2518
+2022-12-04 14:53:03,366 django.server INFO     "GET /login/?next=/download/22 HTTP/1.1" 200 622
+2022-12-04 14:53:10,689 django.server INFO     "POST /login/?next=/download/22 HTTP/1.1" 302 0
+2022-12-04 14:53:10,695 django.server INFO     "GET /download/22 HTTP/1.1" 200 125784
+2022-12-04 14:53:14,646 django.server INFO     "GET /login/ HTTP/1.1" 200 622
+2022-12-04 14:53:18,621 django.server INFO     "POST /login/ HTTP/1.1" 302 0
+2022-12-04 14:53:18,634 django.server INFO     "GET / HTTP/1.1" 200 1311
+2022-12-04 14:53:26,393 django.server INFO     "GET /download/22 HTTP/1.1" 200 125784
+2022-12-04 14:53:35,367 django.server INFO     "GET /download/22 HTTP/1.1" 200 125784
+2022-12-04 14:55:39,430 django.server INFO     "GET /download/23 HTTP/1.1" 200 68073
+2022-12-04 14:56:02,940 django.request ERROR    Internal Server Error: /download/20
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/tj/cyber_security_project_1/server/pages/views.py", line 16, in downloadView
+    f = File.objects.get(pk=fileid)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+server.pages.models.File.DoesNotExist: File matching query does not exist.
+2022-12-04 14:56:02,941 django.server ERROR    "GET /download/20 HTTP/1.1" 500 78378
+2022-12-04 14:56:06,265 django.request ERROR    Internal Server Error: /download/21
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/tj/cyber_security_project_1/server/pages/views.py", line 16, in downloadView
+    f = File.objects.get(pk=fileid)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+server.pages.models.File.DoesNotExist: File matching query does not exist.
+2022-12-04 14:56:06,266 django.server ERROR    "GET /download/21 HTTP/1.1" 500 78378
+2022-12-04 14:56:08,861 django.server INFO     "GET /download/22 HTTP/1.1" 200 125784
+2022-12-04 14:56:11,972 django.server INFO     "GET /download/23 HTTP/1.1" 200 68073
+2022-12-04 14:56:14,779 django.server INFO     "GET /download/24 HTTP/1.1" 200 25
+2022-12-04 14:56:21,075 django.server INFO     "GET /download/24 HTTP/1.1" 200 25
+2022-12-04 15:09:04,520 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-04 15:09:07,575 django.server INFO     "GET / HTTP/1.1" 200 1311
+2022-12-04 15:09:09,668 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-04 15:09:09,676 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-04 15:09:09,756 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622
+2022-12-04 15:09:16,670 django.server INFO     "GET /download/24 HTTP/1.1" 302 0
+2022-12-04 15:09:16,684 django.server INFO     "GET /login/?next=/download/24 HTTP/1.1" 200 622
+2022-12-04 15:09:29,102 django.server INFO     "POST /login/?next=/download/24 HTTP/1.1" 302 0
+2022-12-04 15:09:29,108 django.server INFO     "GET /download/24 HTTP/1.1" 200 25
+2022-12-04 15:09:34,313 django.security.csrf WARNING  Forbidden (CSRF token from POST incorrect.): /login/
+2022-12-04 15:09:34,314 django.server WARNING  "POST /login/?next=/download/24 HTTP/1.1" 403 2518
+2022-12-04 15:09:39,697 django.server INFO     "GET / HTTP/1.1" 200 1311
+2022-12-04 15:09:44,688 django.server INFO     "GET /download/24 HTTP/1.1" 200 25
+2022-12-04 15:26:11,149 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-04 15:26:55,981 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 15:26:56,323 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 15:26:56,384 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 15:26:56,787 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 15:26:56,840 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 15:26:57,276 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 15:26:57,333 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 15:26:57,736 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 15:26:57,789 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 15:26:58,194 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 15:26:58,252 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 15:26:58,663 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 15:26:58,716 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 15:26:59,127 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 15:26:59,180 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 16:33:06,959 django.server INFO     "GET / HTTP/1.1" 200 1311
+2022-12-04 16:33:09,731 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-04 16:33:09,740 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-04 16:33:09,813 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622
+2022-12-04 16:33:15,834 django.request WARNING  Not Found: /fasdfasdfsa
+2022-12-04 16:33:15,836 django.server WARNING  "GET /fasdfasdfsa HTTP/1.1" 404 3008
+2022-12-04 16:33:40,054 django.request WARNING  Not Found: /somerandomtsring
+2022-12-04 16:33:40,054 django.server WARNING  "GET /somerandomtsring HTTP/1.1" 404 3023
+2022-12-04 16:33:55,155 django.request WARNING  Not Found: /some_random_string
+2022-12-04 16:33:55,155 django.server WARNING  "GET /some_random_string HTTP/1.1" 404 3029
+2022-12-04 16:46:14,833 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-04 16:46:29,454 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-04 16:46:29,485 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622
+2022-12-04 16:46:35,565 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-04 16:46:35,574 django.server INFO     "GET / HTTP/1.1" 200 1311
+2022-12-04 16:46:41,404 django.server INFO     "GET /download/24 HTTP/1.1" 302 0
+2022-12-04 16:46:41,414 django.server INFO     "GET / HTTP/1.1" 200 1311
+2022-12-04 16:46:46,663 django.server INFO     "GET /download/24 HTTP/1.1" 302 0
+2022-12-04 16:46:46,672 django.server INFO     "GET / HTTP/1.1" 200 1311
+2022-12-04 16:46:47,994 django.server INFO     "GET /download/22 HTTP/1.1" 302 0
+2022-12-04 16:46:48,018 django.server INFO     "GET / HTTP/1.1" 200 1311
+2022-12-04 16:46:55,872 django.server INFO     "GET /download/23 HTTP/1.1" 200 68073
+2022-12-04 16:54:12,269 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-04 16:54:16,262 django.server INFO     "GET / HTTP/1.1" 200 1311
+2022-12-04 16:54:18,474 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-04 16:54:18,478 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-04 16:54:18,544 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622
+2022-12-04 16:54:27,094 django.server INFO     code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93jj\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+2022-12-04 16:54:27,094 django.server INFO     code 400, message Bad request version ('úú\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ªª\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+2022-12-04 16:54:27,095 django.server ERROR    You're accessing the development server over HTTPS, but it only supports HTTP.
+2022-12-04 16:54:27,095 django.server ERROR    You're accessing the development server over HTTPS, but it only supports HTTP.
+2022-12-04 16:54:27,097 django.server INFO     code 400, message Bad request version ('\x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93JJ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+2022-12-04 16:54:27,097 django.server ERROR    You're accessing the development server over HTTPS, but it only supports HTTP.
+2022-12-04 16:54:27,098 django.server INFO     code 400, message Bad request version ('\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93úú\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+2022-12-04 16:54:27,098 django.server ERROR    You're accessing the development server over HTTPS, but it only supports HTTP.

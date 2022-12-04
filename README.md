@@ -1,6 +1,6 @@
 https://github.com/thegitaccount/course-project-1
 
-The web application has a login page and after logging in you can upload, download or delete your own files. There's also a script for demonstrating of a brute force attack. The applications has some security flaws which will be explained later in this essay. The description of each individual flaw is not meant to be comprehensive but giving the basic idea behind each flaw. Detailed descriptions can be found on owasp.org. There are no extra installations needed for testing the flaws if you have completed securing software course (you need django and python3).
+The web application has a login page and when logged in you can upload, download or delete your own files. There's also a script for demonstrating of a brute force attack. The applications has some security flaws which will be explained later in this essay. The description of each individual flaw is not meant to be comprehensive but giving the basic idea behind each flaw. Detailed descriptions can be found on owasp.org. There are no extra installations needed for testing the flaws if you have completed securing software course (you need django and python3).
 
 
 

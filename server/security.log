@@ -250,3 +250,44 @@
 2022-12-04 14:25:03,248 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622
 2022-12-04 14:25:09,659 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
 2022-12-04 14:25:09,666 django.server INFO     "GET / HTTP/1.1" 200 1686
+2022-12-04 14:34:57,221 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-04 14:35:00,857 django.server INFO     "GET / HTTP/1.1" 200 1686
+2022-12-04 14:35:03,334 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-04 14:35:03,355 django.server INFO     "GET / HTTP/1.1" 200 1686
+2022-12-04 14:35:04,337 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-04 14:35:04,346 django.server INFO     "GET / HTTP/1.1" 200 1686
+2022-12-04 14:46:45,974 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-04 14:46:49,118 django.server INFO     "GET / HTTP/1.1" 200 1686
+2022-12-04 14:46:51,704 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-04 14:46:51,714 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-04 14:46:51,785 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622
+2022-12-04 14:46:56,035 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-04 14:46:56,044 django.server INFO     "GET / HTTP/1.1" 200 1686
+2022-12-04 14:47:05,530 django.server INFO     "GET /download/22 HTTP/1.1" 200 125784
+2022-12-04 14:47:10,246 django.server INFO     "GET /download/24 HTTP/1.1" 200 25
+2022-12-04 14:47:21,061 django.server INFO     "GET /download/22 HTTP/1.1" 200 125784
+2022-12-04 14:47:32,702 django.request ERROR    Internal Server Error: /download/21
+Traceback (most recent call last):
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/tj/cyber_security_project_1/server/pages/views.py", line 16, in downloadView
+    f = File.objects.get(pk=fileid)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/tj/.local/lib/python3.10/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+server.pages.models.File.DoesNotExist: File matching query does not exist.
+2022-12-04 14:47:32,703 django.server ERROR    "GET /download/21 HTTP/1.1" 500 78377
+2022-12-04 14:47:37,288 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-04 14:47:37,293 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-04 14:47:37,340 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622
+2022-12-04 14:47:42,257 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-04 14:47:42,263 django.server INFO     "GET / HTTP/1.1" 200 1311
+2022-12-04 14:47:49,195 django.server INFO     "GET /download/22 HTTP/1.1" 200 125784
+2022-12-04 14:48:00,375 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-04 14:48:00,388 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-04 14:48:00,455 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622

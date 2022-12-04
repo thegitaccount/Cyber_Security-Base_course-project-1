@@ -1,0 +1,241 @@
+2022-12-04 14:00:16,505 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-04 14:00:22,383 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-04 14:00:22,396 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-04 14:00:22,471 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622
+2022-12-04 14:00:28,092 django.request WARNING  Not Found: /admin/
+2022-12-04 14:00:28,092 django.server WARNING  "GET /admin/ HTTP/1.1" 404 2996
+2022-12-04 14:00:37,471 django.server INFO     "GET /newadmin/ HTTP/1.1" 302 0
+2022-12-04 14:00:37,501 django.server INFO     "GET /newadmin/login/?next=/newadmin/ HTTP/1.1" 200 2233
+2022-12-04 14:01:07,531 django.utils.autoreload INFO     /home/tj/cyber_security_project_1/server/config/settings.py changed, reloading.
+2022-12-04 14:01:07,905 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-04 14:01:10,805 django.request WARNING  Not Found: /admin/
+2022-12-04 14:01:10,806 django.server WARNING  "GET /admin/ HTTP/1.1" 404 179
+2022-12-04 14:01:31,470 django.utils.autoreload INFO     /home/tj/cyber_security_project_1/server/config/settings.py changed, reloading.
+2022-12-04 14:01:31,950 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-04 14:02:37,847 django.request WARNING  Not Found: /admin/login/
+2022-12-04 14:02:37,847 django.server WARNING  "GET /admin/login/?next=/admin/ HTTP/1.1" 404 3027
+2022-12-04 14:03:03,062 django.request WARNING  Not Found: /admin/login/
+2022-12-04 14:03:03,063 django.server WARNING  "GET /admin/login/?next=/admin/ HTTP/1.1" 404 3027
+2022-12-04 14:03:36,234 django.request WARNING  Not Found: /admin/login/
+2022-12-04 14:03:36,234 django.server WARNING  "GET /admin/login/?next=/admin/ HTTP/1.1" 404 3027
+2022-12-04 14:04:08,234 django.request WARNING  Not Found: /admin/
+2022-12-04 14:04:08,235 django.server WARNING  "GET /admin/ HTTP/1.1" 404 2996
+2022-12-04 14:04:18,566 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-04 14:04:21,824 django.request WARNING  Not Found: /admin/
+2022-12-04 14:04:21,825 django.server WARNING  "GET /admin/ HTTP/1.1" 404 2996
+2022-12-04 14:04:50,933 django.request WARNING  Not Found: /admin/login/
+2022-12-04 14:04:50,933 django.server WARNING  "GET /admin/login/?next=/admin/ HTTP/1.1" 404 3027
+2022-12-04 14:04:56,279 django.request WARNING  Not Found: /admin/
+2022-12-04 14:04:56,280 django.server WARNING  "GET /admin/ HTTP/1.1" 404 2996
+2022-12-04 14:05:32,665 django.request WARNING  Not Found: /new_admin
+2022-12-04 14:05:32,666 django.server WARNING  "GET /new_admin HTTP/1.1" 404 3005
+2022-12-04 14:05:36,941 django.request WARNING  Not Found: /admin/
+2022-12-04 14:05:36,941 django.server WARNING  "GET /admin/ HTTP/1.1" 404 2996
+2022-12-04 14:05:58,998 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-04 14:06:02,945 django.request WARNING  Not Found: /admin/
+2022-12-04 14:06:02,945 django.server WARNING  "GET /admin/ HTTP/1.1" 404 2996
+2022-12-04 14:06:12,029 django.request WARNING  Not Found: /admin/
+2022-12-04 14:06:12,030 django.server WARNING  "GET /admin/ HTTP/1.1" 404 2996
+2022-12-04 14:06:12,707 django.request WARNING  Not Found: /admin/
+2022-12-04 14:06:12,707 django.server WARNING  "GET /admin/ HTTP/1.1" 404 2996
+2022-12-04 14:06:13,392 django.request WARNING  Not Found: /admin/
+2022-12-04 14:06:13,393 django.server WARNING  "GET /admin/ HTTP/1.1" 404 2996
+2022-12-04 14:06:19,177 django.server INFO     "GET /newadmin/ HTTP/1.1" 302 0
+2022-12-04 14:06:19,198 django.server INFO     "GET /newadmin/login/?next=/newadmin/ HTTP/1.1" 200 2233
+2022-12-04 14:07:43,735 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-04 14:07:46,653 django.server INFO     "GET /admin/ HTTP/1.1" 302 0
+2022-12-04 14:07:46,675 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:07:57,212 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:07:57,563 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:07:57,621 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:07:58,026 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:07:58,080 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:07:58,493 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:07:58,544 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:07:58,950 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:07:59,004 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:07:59,422 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:07:59,478 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:07:59,925 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:07:59,977 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:00,364 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:00,417 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:00,824 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:00,876 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:01,277 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:01,333 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:01,736 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:01,787 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:02,194 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:02,247 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:02,637 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:02,689 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:03,101 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:03,151 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:03,562 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:03,617 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:04,024 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:04,076 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:04,478 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:04,534 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:04,947 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:05,000 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:05,425 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:05,476 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:05,906 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:05,959 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:06,377 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:06,430 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:06,831 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:06,884 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:07,308 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:07,360 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:07,763 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:07,816 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:08,302 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:08,357 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:08,757 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:08,807 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:09,210 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:09,261 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:09,666 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:09,721 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:10,105 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:10,160 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:10,573 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:10,624 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:11,025 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:11,076 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:11,493 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:11,544 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:11,948 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:12,001 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:12,419 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:12,473 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:12,918 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:12,971 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:13,381 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:13,433 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:13,836 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:13,887 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:14,285 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:14,338 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:14,744 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:14,795 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:15,198 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:15,254 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:15,668 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:15,720 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:16,124 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:16,176 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:16,593 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:16,644 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:17,088 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:17,140 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:17,555 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:17,608 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:18,008 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:18,060 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:18,475 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:18,529 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:18,920 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:18,972 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:19,384 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:19,437 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:19,841 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:19,892 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:20,291 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:20,347 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:20,748 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:20,800 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:21,206 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:21,261 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:21,674 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:21,725 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:22,113 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:22,164 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:22,572 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:22,624 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:23,028 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:23,080 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:23,505 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:23,556 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:23,973 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:24,023 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:24,451 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:24,504 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:24,908 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:24,959 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:25,399 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:25,454 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:25,861 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:25,911 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:26,316 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:26,367 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:26,773 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:26,824 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:27,223 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:08:27,276 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:08:27,689 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2022-12-04 14:08:27,748 django.server INFO     "GET /admin/ HTTP/1.1" 200 3892
+2022-12-04 14:12:33,141 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-04 14:12:36,402 django.request WARNING  Not Found: /admin/login/
+2022-12-04 14:12:36,403 django.server WARNING  "GET /admin/login/?next=/admin/ HTTP/1.1" 404 3027
+2022-12-04 14:13:10,939 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-04 14:13:12,364 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:13:12,978 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:13:13,318 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:13:13,383 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:13:13,791 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:13:13,844 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:15:21,795 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-12-04 14:15:26,912 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:15:27,295 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:15:27,347 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:15:27,753 django.server INFO     "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2382
+2022-12-04 14:15:27,804 django.server INFO     "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2221
+2022-12-04 14:15:33,634 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-04 14:15:33,669 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622
+2022-12-04 14:15:38,796 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-04 14:15:38,802 django.server INFO     "GET / HTTP/1.1" 200 932
+2022-12-04 14:15:41,888 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-04 14:15:41,897 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-04 14:15:41,954 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622
+2022-12-04 14:15:47,057 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-04 14:15:47,068 django.server INFO     "GET / HTTP/1.1" 200 931
+2022-12-04 14:15:52,077 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-04 14:15:52,098 django.server INFO     "GET / HTTP/1.1" 200 931
+2022-12-04 14:16:02,547 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-04 14:16:02,564 django.server INFO     "GET / HTTP/1.1" 200 1308
+2022-12-04 14:16:09,208 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-04 14:16:09,217 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-04 14:16:09,267 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622
+2022-12-04 14:16:14,710 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-04 14:16:14,716 django.server INFO     "GET / HTTP/1.1" 200 932
+2022-12-04 14:16:16,306 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-04 14:16:16,328 django.server INFO     "GET / HTTP/1.1" 200 932
+2022-12-04 14:16:51,807 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-04 14:16:51,828 django.server INFO     "GET / HTTP/1.1" 200 932
+2022-12-04 14:17:18,115 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-04 14:17:18,136 django.server INFO     "GET / HTTP/1.1" 200 1311
+2022-12-04 14:17:39,359 django.server INFO     "GET / HTTP/1.1" 200 1311
+2022-12-04 14:17:40,561 django.server INFO     "GET / HTTP/1.1" 200 1311
+2022-12-04 14:17:41,612 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-04 14:17:41,622 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-04 14:17:41,679 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622
+2022-12-04 14:17:44,999 django.server INFO     "POST /login/?next=/ HTTP/1.1" 200 779
+2022-12-04 14:17:50,018 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-04 14:17:50,026 django.server INFO     "GET / HTTP/1.1" 200 1311
+2022-12-04 14:18:01,240 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-04 14:18:01,252 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-04 14:18:01,308 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622
+2022-12-04 14:18:03,996 django.server INFO     "POST /login/?next=/ HTTP/1.1" 302 0
+2022-12-04 14:18:04,002 django.server INFO     "GET / HTTP/1.1" 200 1308
+2022-12-04 14:18:18,644 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-04 14:18:18,665 django.server INFO     "GET / HTTP/1.1" 200 1308
+2022-12-04 14:18:35,332 django.server INFO     "POST /add/ HTTP/1.1" 302 0
+2022-12-04 14:18:35,362 django.server INFO     "GET / HTTP/1.1" 200 1686
+2022-12-04 14:18:42,176 django.server INFO     "GET / HTTP/1.1" 200 1686
+2022-12-04 14:18:44,366 django.server INFO     "POST /logout/ HTTP/1.1" 302 0
+2022-12-04 14:18:44,378 django.server INFO     "GET / HTTP/1.1" 302 0
+2022-12-04 14:18:44,441 django.server INFO     "GET /login/?next=/ HTTP/1.1" 200 622
